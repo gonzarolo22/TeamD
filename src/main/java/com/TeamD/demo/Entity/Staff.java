@@ -25,11 +25,18 @@ public class Staff {
     @OneToMany(mappedBy = "staff",cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Region>region=new ArrayList<>();
 
-    @OneToMany(mappedBy = "staff", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    private List<Especialidad> especialidad=new ArrayList<>();
-
-   @ManyToOne
+    @ManyToOne
     private Region regions;
 
+    public Staff() {
+    }
 
+    public Staff(int id, String nombre, LocalDate creacion, Usuario usuario, List<Region> region, Region regions) {
+        this.id = id;
+        this.nombre = nombre;
+        this.creacion = creacion;
+        this.usuario = usuario;
+        this.region = region;
+        this.regions = regions;
+    }
 }

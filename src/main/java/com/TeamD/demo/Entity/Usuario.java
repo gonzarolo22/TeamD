@@ -46,10 +46,17 @@ public class Usuario {
     public Usuario() {
     }
 
-    public Usuario(int id, String nombre, String apellido) {
+
+    public Usuario(int id, String nombre, String apellido, int edad, String email, int telefono, List<Especialidad> especialidad, List<Staff> staff, List<Region> region, List<Señority> nivelUsuario) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
+        this.edad = edad;
+        this.email = email;
+        this.telefono = telefono;
+        this.especialidad = especialidad;
+        this.staff = staff;
+        this.region = region;
+        this.nivelUsuario = nivelUsuario;
     }
-
 }

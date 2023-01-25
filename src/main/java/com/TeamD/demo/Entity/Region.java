@@ -31,6 +31,16 @@ public class Region {
     @OneToMany(mappedBy = "regions", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private List<Staff>staff_r=new ArrayList<>();
 
+    public Region() {
+    }
 
-
+    public Region(int id, String nombre, Usuario usuario, Señority señority, Especialidad especialidad, Staff staff, List<Staff> staff_r) {
+        this.id = id;
+        this.nombre = nombre;
+        this.usuario = usuario;
+        this.señority = señority;
+        this.especialidad = especialidad;
+        this.staff = staff;
+        this.staff_r = staff_r;
+    }
 }

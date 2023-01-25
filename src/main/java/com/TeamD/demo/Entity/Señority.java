@@ -21,4 +21,14 @@ public class Señority {
 
     @OneToMany(mappedBy = "señority", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private List<Region> region =new ArrayList<>();
+
+    public Señority() {
+    }
+
+    public Señority(int id, String nivel, Usuario usuario, List<Region> region) {
+        this.id = id;
+        this.nivel = nivel;
+        this.usuario = usuario;
+        this.region = region;
+    }
 }

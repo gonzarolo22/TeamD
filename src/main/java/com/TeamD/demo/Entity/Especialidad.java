@@ -22,7 +22,13 @@ public class Especialidad {
     @OneToMany(mappedBy = "especialidad", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private List<Region> region=new ArrayList<>();
 
-   @ManyToOne
-    private Staff staff;
+    public Especialidad() {
+    }
 
+    public Especialidad(int id, String nombre, Usuario usuario, List<Region> region) {
+        this.id = id;
+        this.nombre = nombre;
+        this.usuario = usuario;
+        this.region = region;
+    }
 }
