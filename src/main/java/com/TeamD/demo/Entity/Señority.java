@@ -16,7 +16,30 @@ public class Señority {
     @Column(name = "nivel", nullable = false)
     private String nivel;
 
+    @Column(name = "region_id")
+    private Integer regionId;
 
+    @OneToMany(mappedBy = "señority")
+    private List<Usurious> usurious;
 
+    @ManyToOne
+    @JoinColumn(name = "region_id", updatable = false, insertable = false)
+    private Region region;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getNivel() {
+        return nivel;
+    }
+
+    public void setNivel(String nivel) {
+        this.nivel = nivel;
+    }
 }
 

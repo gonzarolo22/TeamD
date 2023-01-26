@@ -1,8 +1,6 @@
 package com.TeamD.demo.Controller;
 
-import com.TeamD.demo.CaseUse.CreateUsuario;
-import com.TeamD.demo.CaseUse.DeleteUsuario;
-import com.TeamD.demo.CaseUse.ListarUsuarios;
+import com.TeamD.demo.CaseUse.Usuario.ListarUsuarios;
 import com.TeamD.demo.Entity.Usurious;
 import org.springframework.web.bind.annotation.*;
 

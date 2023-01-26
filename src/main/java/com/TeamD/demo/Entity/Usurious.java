@@ -16,7 +16,8 @@ public class Usurious {
     @Column(name = "apellido")
     private String apellido;
 
-
+    @Column(name = "edad")
+    private Integer edad;
 
     @Column(name = "Email")
     private String email;
@@ -30,6 +31,9 @@ public class Usurious {
     @Column(name = "señority_id")
     private Integer señoritiId;
 
+    @Column(name = "especialidad_id")
+    private String especialidadId;
+
     @Column(name = "staff_id")
     private Integer staffId;
 
@@ -37,9 +41,24 @@ public class Usurious {
     @JoinColumn(name = "region_id",updatable = false, insertable = false)
     private Region region;
 
-    
+    @ManyToOne
+    @JoinColumn(name = "señority_id", updatable = false, insertable = false)
+    private Señority señority;
 
 
+
+    @ManyToOne
+    @JoinColumn(name = "staff_id", insertable = false, updatable = false)
+    private Staff staff;
+
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     public String getNombre() {
         return nombre;
@@ -55,6 +74,14 @@ public class Usurious {
 
     public void setApellido(String apellido) {
         this.apellido = apellido;
+    }
+
+    public Integer getEdad() {
+        return edad;
+    }
+
+    public void setEdad(Integer edad) {
+        this.edad = edad;
     }
 
     public String getEmail() {
@@ -87,6 +114,14 @@ public class Usurious {
 
     public void setSeñoritiId(Integer señoritiId) {
         this.señoritiId = señoritiId;
+    }
+
+    public String getEspecialidadId() {
+        return especialidadId;
+    }
+
+    public void setEspecialidadId(String especialidadId) {
+        this.especialidadId = especialidadId;
     }
 
     public Integer getStaffId() {

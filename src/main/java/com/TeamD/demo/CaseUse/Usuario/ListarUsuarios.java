@@ -1,19 +1,20 @@
-package com.TeamD.demo.CaseUse;
+package com.TeamD.demo.CaseUse.Usuario;
 
 import com.TeamD.demo.Entity.Usurious;
 import com.TeamD.demo.Service.UsuarioService;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 @Component
-public class CreateUsuario {
+public class ListarUsuarios {
     private UsuarioService usuarioService;
 
-    public CreateUsuario(UsuarioService usuarioService) {
+    public ListarUsuarios(UsuarioService usuarioService) {
         this.usuarioService = usuarioService;
     }
 
-    public Usurious crear(Usurious nuevo){
-        return usuarioService.create(nuevo);
+    public List<Usurious> listar(){
+        return usuarioService.getAll();
     }
-
 }

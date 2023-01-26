@@ -1,4 +1,4 @@
-package com.TeamD.demo.CaseUse;
+package com.TeamD.demo.CaseUse.Usuario;
 
 import com.TeamD.demo.Service.UsuarioService;
 import org.springframework.stereotype.Component;
